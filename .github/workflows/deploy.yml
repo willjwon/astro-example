@@ -19,7 +19,10 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
 
-      - name: Compile Documents
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Compile Website
         run: npx astro build
 
   deploy:
